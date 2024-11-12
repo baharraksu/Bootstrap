@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satış Etkinliği</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .event-card {
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .event-card:hover {
+      transform: scale(1.05);
+    }
+    .event-description {
+      min-height: 150px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container">
+    <a class="navbar-brand" href="ciceksepeti.html">Bahar Sepeti</a>
+    <div class="d-flex align-items-center">
+      <a href="login.html" class="nav-link me-3">Giriş Yap</a>
+      <a href="register.html" class="nav-link me-3">Üye Ol</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Satış Etkinliği Sayfası -->
+<div class="container my-4">
+  <h2 class="text-center mb-4">Satış Etkinlikleri</h2>
+
+  <!-- Etkinlikler Listesi (Event Cards) -->
+  <div class="row">
+    <!-- Etkinlik 1 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 1">
+        <div class="card-body">
+          <h5 class="card-title">Yaz İndirim Etkinliği</h5>
+          <p class="card-text event-description">Bu etkinlikte yaz sezonu için yapılan büyük indirimleri keşfedin. Etkinlik boyunca özel fırsatlar sunulacaktır.</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etkinlik 2 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 2">
+        <div class="card-body">
+          <h5 class="card-title">Kış İndirimi Başlangıcı</h5>
+          <p class="card-text event-description">Kış sezonunun başlangıcıyla birlikte, mağazamızda %50'ye varan indirimler sizleri bekliyor!</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etkinlik 3 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 3">
+        <div class="card-body">
+          <h5 class="card-title">Yılbaşı Özel Etkinliği</h5>
+          <p class="card-text event-description">Yılbaşı için yapılan özel kampanyalarla yeni yıl indirimlerinden yararlanın.</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etkinlik 4 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 4">
+        <div class="card-body">
+          <h5 class="card-title">Bahar Sezonu İndirimleri</h5>
+          <p class="card-text event-description">Bahar sezonuna özel büyük indirimler başladı! Yeni koleksiyonlarla mağazalarımızda sizi bekliyoruz.</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etkinlik 5 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 5">
+        <div class="card-body">
+          <h5 class="card-title">Büyük Yaz İndirimleri</h5>
+          <p class="card-text event-description">Yaz boyunca sürecek büyük indirim fırsatlarıyla favori ürünlerinizi uygun fiyatlarla satın alabilirsiniz.</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etkinlik 6 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 6">
+        <div class="card-body">
+          <h5 class="card-title">Anneler Günü İndirimleri</h5>
+          <p class="card-text event-description">Anneler Günü'ne özel indirimlerle hediyenizi uygun fiyata satın alabilirsiniz.</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etkinlik 7 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 7">
+        <div class="card-body">
+          <h5 class="card-title">Kurban Bayramı İndirimi</h5>
+          <p class="card-text event-description">Kurban Bayramı'na özel indirimler ile mağazamızda size özel fırsatlar var!</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Etkinlik 8 -->
+    <div class="col-md-4">
+      <div class="card event-card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Satış Etkinliği 8">
+        <div class="card-body">
+          <h5 class="card-title">Öğrenciler İçin İndirim</h5>
+          <p class="card-text event-description">Öğrencilere özel büyük indirimler! Öğrenci kartı ile alışveriş yaparak avantajlardan yararlanın.</p>
+          <a href="#" class="btn btn-primary">Detayları Gör</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Etkinlik Detayları Modali -->
+  <div class="modal fade" id="eventDetailsModal" tabindex="-1" aria-labelledby="eventDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eventDetailsModalLabel">Etkinlik Detayları</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Etkinlik Adı:</strong> <span id="eventTitle"></span></p>
+          <p><strong>Açıklama:</strong> <span id="eventDescription"></span></p>
+          <p><strong>Tarih:</strong> <span id="eventDate"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="m-0">© 2024 Bahar Sepeti. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<script>
+  // Etkinlik detaylarını modal içinde görüntülemek için fonksiyon
+  function showEventDetails(title, description, date) {
+    document.getElementById('eventTitle').textContent = title;
+    document.getElementById('eventDescription').textContent = description;
+    document.getElementById('eventDate').textContent = date;
+  }
+
+  // Etkinlik kartı tıklama ile

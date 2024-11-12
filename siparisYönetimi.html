@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sipariş Yönetimi</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .order-card {
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .order-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container">
+    <a class="navbar-brand" href="ciceksepeti.html">Bahar Sepeti</a>
+    <div class="d-flex align-items-center">
+      <a href="login.html" class="nav-link me-3">Giriş Yap</a>
+      <a href="register.html" class="nav-link me-3">Üye Ol</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Sipariş Yönetimi Sayfası -->
+<div class="container my-4">
+  <h2 class="text-center mb-4">Sipariş Yönetimi</h2>
+
+  <!-- Siparişler Listesi -->
+  <div class="mb-5">
+    <h3>Mevcut Siparişler</h3>
+    <div class="row">
+      <!-- Sipariş Kartları -->
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #001</h5>
+            <p class="card-text">Müşteri: Ahmet Yılmaz</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-warning">Hazırlanıyor</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #002</h5>
+            <p class="card-text">Müşteri: Ayşe Demir</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-success">Tamamlandı</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #003</h5>
+            <p class="card-text">Müşteri: Mehmet Çelik</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-danger">İptal Edildi</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yeni Sipariş Kartları -->
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #004</h5>
+            <p class="card-text">Müşteri: Zeynep Kılıç</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-info">Yolda</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #005</h5>
+            <p class="card-text">Müşteri: Burak Öztürk</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-primary">Hazırlanıyor</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #006</h5>
+            <p class="card-text">Müşteri: Selin Can</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-secondary">Beklemede</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #007</h5>
+            <p class="card-text">Müşteri: Onur Yıldız</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-success">Tamamlandı</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #008</h5>
+            <p class="card-text">Müşteri: İrem Aydın</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-warning">Hazırlanıyor</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card order-card">
+          <div class="card-body">
+            <h5 class="card-title">Sipariş #008</h5>
+            <p class="card-text">Müşteri: Bahar Aksu</p>
+            <p class="card-text">Sipariş Durumu: <span class="badge bg-warning">Hazırlanıyor</span></p>
+            <a href="siparisDuzenle.html" class="btn btn-primary btn-sm">Düzenle</a>
+            <button class="btn btn-danger btn-sm">Sil</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Sipariş Durumu Güncelleme Formu -->
+  <div class="mb-5">
+    <h3>Yeni Sipariş Durumu Güncelleme</h3>
+    <form>
+      <div class="mb-3">
+        <label for="orderId" class="form-label">Sipariş ID</label>
+        <input type="text" class="form-control" id="orderId" required>
+      </div>
+      <div class="mb-3">
+        <label for="orderStatus" class="form-label">Sipariş Durumu</label>
+        <select class="form-select" id="orderStatus" required>
+          <option value="hazırlanıyor">Hazırlanıyor</option>
+          <option value="tamamlandı">Tamamlandı</option>
+          <option value="iptal-edildi">İptal Edildi</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success">Durumu Güncelle</button>
+    </form>
+  </div>
+
+  <!-- Sipariş Ekleme Formu -->
+  <div class="mb-5">
+    <h3>Yeni Sipariş Ekle</h3>
+    <form>
+      <div class="mb-3">
+        <label for="customerName" class="form-label">Müşteri Adı</label>
+        <input type="text" class="form-control" id="customerName" required>
+      </div>
+      <div class="mb-3">
+        <label for="orderDetails" class="form-label">Sipariş Detayları</label>
+        <textarea class="form-control" id="orderDetails" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="orderAmount" class="form-label">Sipariş Tutarı</label>
+        <input type="number" class="form-control" id="orderAmount" required>
+      </div>
+      <button type="submit" class="btn btn-success">Sipariş Ekle</button>
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>

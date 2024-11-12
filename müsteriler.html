@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müşteriler</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .customer-card {
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .customer-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+  <div class="container">
+    <a class="navbar-brand" href="ciceksepeti.html">Bahar Sepeti</a>
+    <div class="d-flex align-items-center">
+      <a href="login.html" class="nav-link me-3">Giriş Yap</a>
+      <a href="register.html" class="nav-link me-3">Üye Ol</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Müşteriler Sayfası -->
+<div class="container my-4">
+  <h2 class="text-center mb-4">Müşteriler</h2>
+
+  <!-- Müşteriler Arama -->
+  <div class="mb-3">
+    <input type="text" id="searchInput" class="form-control" placeholder="Müşteri arayın...">
+  </div>
+
+  <!-- Müşteri Listesi (Bootstrap List Group) -->
+  <ul class="list-group" id="customerList">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Ahmet Yılmaz</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Ahmet Yılmaz', '0555 123 45 67', 'ahmet@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Ayşe Demir</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Ayşe Demir', '0555 987 65 43', 'ayse@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Mehmet Çelik</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Mehmet Çelik', '0555 654 32 10', 'mehmet@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Zeynep Kılıç</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Zeynep Kılıç', '0555 321 45 67', 'zeynep@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Burak Öztürk</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Burak Öztürk', '0555 789 12 34', 'burak@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Selin Can</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Selin Can', '0555 876 54 32', 'selin@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Ali Can</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Ali Can', '0555 432 10 98', 'ali@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Melis Yılmaz</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Melis Yılmaz', '0555 654 21 00', 'melis@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Ayhan Kılıç</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Ayhan Kılıç', '0555 320 15 27', 'ayhan@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Ceren Aksoy</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Ceren Aksoy', '0555 987 65 10', 'ceren@example.com')">Detaylar</button>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <span>Müşteri: Baran Özdemir</span>
+      <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#customerDetailsModal" onclick="showCustomerDetails('Baran Özdemir', '0555 213 45 67', 'baran@example.com')">Detaylar</button>
+    </li>
+  </ul>
+
+  <!-- Modal: Müşteri Detayları -->
+  <div class="modal fade" id="customerDetailsModal" tabindex="-1" aria-labelledby="customerDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="customerDetailsModalLabel">Müşteri Detayları</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Adı Soyadı:</strong> <span id="customerName"></span></p>
+          <p><strong>Telefon:</strong> <span id="customerPhone"></span></p>
+          <p><strong>E-posta:</strong> <span id="customerEmail"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="m-0">© 2024 Bahar Sepeti. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<script>
+  // Müşteri detaylarını modal içinde görüntülemek için fonksiyon
+  function showCustomerDetails(name, phone, email) {
+    document.getElementById('customerName').textContent = name;
+    document.getElementById('customerPhone').textContent = phone;
+    document.getElementById('customerEmail').textContent = email;
+  }
+
+  // jQuery ile Arama fonksiyonu
+  $(document).ready(function() {
+    $('#searchInput').on('input', function() {
+      var searchValue = $(this).val().toLowerCase();
+      $('#customerList li').each(function() {
+        var customerName = $(this).text().toLowerCase();
+        if (customerName.indexOf(searchValue) !== -1) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

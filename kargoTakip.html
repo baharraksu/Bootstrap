@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kargo Takip - Bahar Sepeti</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .form-control:focus {
+      border-color: #5cb85c; /* Yeşil odak rengi */
+    }
+    .btn-primary {
+      background-color: #5cb85c; /* Yeşil buton rengi */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Bahar Sepeti</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="aranjman.html">Çiçek</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dogumGünü.html">Doğum Günü</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hediye.html">Hediye</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="TazeCicek.html">Kişiye Özel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="çikolataSetleri.html">Çikolata</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="saksiCicek.html">Saksı Çiçekleri</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aranjman.html">Buketler</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Kargo Takip Formu -->
+<div class="container">
+  <h2 class="text-center">Kargo Takip</h2>
+  <form id="trackingForm" class="mt-4">
+    <div class="mb-3">
+      <label for="trackingNumber" class="form-label">Kargo Takip Numarası</label>
+      <input type="text" class="form-control" id="trackingNumber" placeholder="Takip numaranızı girin" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Takip Et</button>
+  </form>
+
+  <div id="trackingResult" class="mt-4" style="display:none;">
+    <h4>Kargo Durumu:</h4>
+    <p id="statusMessage"></p>
+  </div>
+</div>
+
+<script>
+  document.getElementById('trackingForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Formun varsayılan gönderimini durdur
+
+    const trackingNumber = document.getElementById('trackingNumber').value.trim();
+
+    // Kargo durumu simülasyonu
+    let statusMessage = '';
+
+    switch (trackingNumber) {
+      case '123456':
+        statusMessage = 'Kargonuz, dağıtım merkezinde bekliyor.';
+        break;
+      case '654321':
+        statusMessage = 'Kargonuz yolda, 2 gün içinde ulaşması bekleniyor.';
+        break;
+      case '111222':
+        statusMessage = 'Kargonuz teslim edildi.';
+        break;
+      case '333444':
+        statusMessage = 'Kargonuz iade edildi.';
+        break;
+      default:
+        statusMessage = 'Takip numaranız bulunamadı. Lütfen kontrol edin.';
+    }
+
+    // Sonuç bölümünü göster
+    document.getElementById('statusMessage').innerText = statusMessage;
+    document.getElementById('trackingResult').style.display = 'block';
+  });
+</script>
+
+<!-- Footer -->
+<footer class="bg-light py-4">
+  <div class="container text-center">
+    <p class="m-0">© 2024 Bahar Sepeti. Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

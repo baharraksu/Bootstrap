@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ürünler - Bahar Sepeti</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="text-center">Ürünler</h2>
+  <div id="productList" class="mt-4">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Gül Buketi</h5>
+        <p class="card-text">Aşkın sembolü, taze gül buketi.</p>
+        <button class="btn btn-primary add-to-cart" data-product="Gül Buketi">Sepete Ekle</button>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Lale</h5>
+        <p class="card-text">Baharı simgeleyen güzel bir lale.</p>
+        <button class="btn btn-primary add-to-cart" data-product="Lale">Sepete Ekle</button>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Orkide</h5>
+        <p class="card-text">Şıklığın ve zarafetin simgesi orkide.</p>
+        <button class="btn btn-primary add-to-cart" data-product="Orkide">Sepete Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="mt-5">Sepetiniz</h4>
+  <ul id="cart" class="list-group mt-2"></ul>
+</div>
+
+<script>
+  // Sepet dizisi
+  const cart = [];
+
+  // Ürünleri sepete ekleme işlemi
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+      const product = this.getAttribute('data-product');
+      cart.push(product); // Ürünü sepete ekle
+
+      // Sepeti güncelle
+      updateCart();
+    });
+  });
+
+  // Sepet güncelleme fonksiyonu
+  function updateCart() {
+    const cartList = document.getElementById('cart');
+    cartList.innerHTML = ''; // Mevcut sepeti temizle
+
+    // Sepetteki her ürün için liste elemanı oluştur
+    cart.forEach((product, index) => {
+      const li = document.createElement('li');
+      li.className = 'list-group-item';
+      li.textContent = product;
+      cartList.appendChild(li);
+    });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
